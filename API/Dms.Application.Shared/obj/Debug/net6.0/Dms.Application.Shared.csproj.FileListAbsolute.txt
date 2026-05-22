@@ -1,0 +1,12 @@
+D:\Project\DienLanh\DienLanh\API\Dms.Application.Shared\bin\Debug\net6.0\Dms.Application.Shared.deps.json
+D:\Project\DienLanh\DienLanh\API\Dms.Application.Shared\bin\Debug\net6.0\Dms.Application.Shared.dll
+D:\Project\DienLanh\DienLanh\API\Dms.Application.Shared\bin\Debug\net6.0\Dms.Application.Shared.pdb
+D:\Project\DienLanh\DienLanh\API\Dms.Application.Shared\obj\Debug\net6.0\Dms.Application.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\DienLanh\DienLanh\API\Dms.Application.Shared\obj\Debug\net6.0\Dms.Application.Shared.AssemblyInfoInputs.cache
+D:\Project\DienLanh\DienLanh\API\Dms.Application.Shared\obj\Debug\net6.0\Dms.Application.Shared.AssemblyInfo.cs
+D:\Project\DienLanh\DienLanh\API\Dms.Application.Shared\obj\Debug\net6.0\Dms.Application.Shared.csproj.CoreCompileInputs.cache
+D:\Project\DienLanh\DienLanh\API\Dms.Application.Shared\obj\Debug\net6.0\Dms.Application.Shared.sourcelink.json
+D:\Project\DienLanh\DienLanh\API\Dms.Application.Shared\obj\Debug\net6.0\Dms.Application.Shared.dll
+D:\Project\DienLanh\DienLanh\API\Dms.Application.Shared\obj\Debug\net6.0\refint\Dms.Application.Shared.dll
+D:\Project\DienLanh\DienLanh\API\Dms.Application.Shared\obj\Debug\net6.0\Dms.Application.Shared.pdb
+D:\Project\DienLanh\DienLanh\API\Dms.Application.Shared\obj\Debug\net6.0\ref\Dms.Application.Shared.dll

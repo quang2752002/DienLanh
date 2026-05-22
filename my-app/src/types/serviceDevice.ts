@@ -1,0 +1,19 @@
+export interface ServiceDevice {
+  id: string;
+  name: string;
+  brand: string;
+  modelNumber?: string;
+  serialNumber?: string;
+  description?: string;
+  categoryId: string;
+  created?: string;
+}
+
+export interface CreateServiceDeviceInput {
+  name: string;
+  brand: string;
+  modelNumber?: string;
+  serialNumber?: string;
+  description?: string;
+  categoryId: string;
+}

@@ -1,7 +1,44 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Project\\DienLanh\\DienLanh\\API\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{67024587-E05E-47AA-8C2E-B47E9E1975E0}|Dms.Domain\\Dms.Domain.csproj|d:\\project\\dienlanh\\dienlanh\\api\\dms.domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67024587-E05E-47AA-8C2E-B47E9E1975E0}|Dms.Domain\\Dms.Domain.csproj|solutionrelative:dms.domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D9BC2FE-3F24-495D-8685-7C784EB9567A}|Dms.Application.Shared\\Dms.Application.Shared.csproj|d:\\project\\dienlanh\\dienlanh\\api\\dms.application.shared\\dms.application.shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8D9BC2FE-3F24-495D-8685-7C784EB9567A}|Dms.Application.Shared\\Dms.Application.Shared.csproj|solutionrelative:dms.application.shared\\dms.application.shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67024587-E05E-47AA-8C2E-B47E9E1975E0}|Dms.Domain\\Dms.Domain.csproj|d:\\project\\dienlanh\\dienlanh\\api\\dms.domain\\dms.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{67024587-E05E-47AA-8C2E-B47E9E1975E0}|Dms.Domain\\Dms.Domain.csproj|solutionrelative:dms.domain\\dms.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67024587-E05E-47AA-8C2E-B47E9E1975E0}|Dms.Domain\\Dms.Domain.csproj|d:\\project\\dienlanh\\dienlanh\\api\\dms.domain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67024587-E05E-47AA-8C2E-B47E9E1975E0}|Dms.Domain\\Dms.Domain.csproj|solutionrelative:dms.domain\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8ED7F78-F6E7-458B-A919-568DB07EA89B}|API\\API.csproj|d:\\project\\dienlanh\\dienlanh\\api\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8ED7F78-F6E7-458B-A919-568DB07EA89B}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8ED7F78-F6E7-458B-A919-568DB07EA89B}|API\\API.csproj|d:\\project\\dienlanh\\dienlanh\\api\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D8ED7F78-F6E7-458B-A919-568DB07EA89B}|API\\API.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8ED7F78-F6E7-458B-A919-568DB07EA89B}|API\\API.csproj|d:\\project\\dienlanh\\dienlanh\\api\\api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D8ED7F78-F6E7-458B-A919-568DB07EA89B}|API\\API.csproj|solutionrelative:api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE1CD092-0270-4977-BAC3-BD0E6A54B14E}|Dms.Infrastructure\\Dms.Infrastructure.csproj|d:\\project\\dienlanh\\dienlanh\\api\\dms.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE1CD092-0270-4977-BAC3-BD0E6A54B14E}|Dms.Infrastructure\\Dms.Infrastructure.csproj|solutionrelative:dms.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8088F44-F7A5-400F-B6DB-E864D186EA47}|Dms.Application\\Dms.Application.csproj|d:\\project\\dienlanh\\dienlanh\\api\\dms.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8088F44-F7A5-400F-B6DB-E864D186EA47}|Dms.Application\\Dms.Application.csproj|solutionrelative:dms.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -17,17 +54,13 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
             }
           ]
         },
         {
           "DockedHeight": 233,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -36,6 +69,123 @@
             {
               "$type": "Bookmark",
               "Name": "ST:54:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Domain\\Common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Dms.Domain\\Common\\BaseEntity.cs",
+              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Domain\\Common\\BaseEntity.cs",
+              "RelativeToolTip": "Dms.Domain\\Common\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T04:38:53.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dms.Application.Shared",
+              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Application.Shared\\Dms.Application.Shared.csproj",
+              "RelativeDocumentMoniker": "Dms.Application.Shared\\Dms.Application.Shared.csproj",
+              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Application.Shared\\Dms.Application.Shared.csproj",
+              "RelativeToolTip": "Dms.Application.Shared\\Dms.Application.Shared.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-22T04:37:31.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dms.Domain",
+              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Domain\\Dms.Domain.csproj",
+              "RelativeDocumentMoniker": "Dms.Domain\\Dms.Domain.csproj",
+              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Domain\\Dms.Domain.csproj",
+              "RelativeToolTip": "Dms.Domain\\Dms.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-22T04:37:29.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Domain\\Category.cs",
+              "RelativeDocumentMoniker": "Dms.Domain\\Category.cs",
+              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Domain\\Category.cs",
+              "RelativeToolTip": "Dms.Domain\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T04:34:49.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "API",
+              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\API.csproj",
+              "RelativeDocumentMoniker": "API\\API.csproj",
+              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\API.csproj",
+              "RelativeToolTip": "API\\API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-22T04:32:48.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\Class1.cs",
+              "RelativeDocumentMoniker": "Dms.Infrastructure\\Class1.cs",
+              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\Class1.cs",
+              "RelativeToolTip": "Dms.Infrastructure\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T04:31:57.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Application\\Class1.cs",
+              "RelativeDocumentMoniker": "Dms.Application\\Class1.cs",
+              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Application\\Class1.cs",
+              "RelativeToolTip": "Dms.Application\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T04:30:39.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T03:53:07.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "API\\appsettings.json",
+              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\appsettings.json",
+              "RelativeToolTip": "API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-21T03:53:04.026Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
