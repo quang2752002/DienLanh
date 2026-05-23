@@ -1,6 +1,8 @@
+using Dms.Application.Interfaces;
 using Dms.Domain.Interfaces;
 using Dms.Infrastructure.Persistence;
 using Dms.Infrastructure.Repositories;
+using Dms.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +20,13 @@ namespace Dms.Infrastructure
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+            // Authentication Services
+            services.AddScoped<ITokenService,TokenService>();
+            services.AddScoped<IGoogleAuthService,GoogleAuthService>();
+            
+            // Recaptcha Service
+            services.AddHttpClient<IRecaptchaService,RecaptchaService>();
 
             return services;
         }

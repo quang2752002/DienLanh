@@ -1,12 +1,19 @@
-using Dms.Application;
-using Dms.Infrastructure;
 using API.Middlewares;
+using Dms.Application;
+using Dms.Domain.Entities;
+using Dms.Infrastructure;
+using Dms.Infrastructure.Persistence;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Đăng ký cấu hình từ lớp Application và Infrastructure
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
+// Identity
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 
 // Cấu hình CORS cho phép Next.js (http://localhost:3000) kết nối
 builder.Services.AddCors(options =>

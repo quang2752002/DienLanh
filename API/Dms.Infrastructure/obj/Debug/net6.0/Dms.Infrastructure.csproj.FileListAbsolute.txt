@@ -18,3 +18,5 @@ D:\Project\DienLanh\DienLanh\API\Dms.Infrastructure\obj\Debug\net6.0\Dms.Infrast
 D:\Project\DienLanh\DienLanh\API\Dms.Infrastructure\obj\Debug\net6.0\refint\Dms.Infrastructure.dll
 D:\Project\DienLanh\DienLanh\API\Dms.Infrastructure\obj\Debug\net6.0\Dms.Infrastructure.pdb
 D:\Project\DienLanh\DienLanh\API\Dms.Infrastructure\obj\Debug\net6.0\ref\Dms.Infrastructure.dll
+D:\Project\DienLanh\DienLanh\API\Dms.Infrastructure\bin\Debug\net6.0\Dms.Infrastructure.runtimeconfig.json
+D:\Project\DienLanh\DienLanh\API\Dms.Infrastructure\obj\Debug\net6.0\Dms.Infrastructure.genruntimeconfig.cache
