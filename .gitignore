@@ -9,6 +9,7 @@ obj/
 
 # ASP.NET Core secrets
 appsettings.Development.json
+appsettings.json
 
 # Node modules
 node_modules/
