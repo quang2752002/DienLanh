@@ -11,10 +11,6 @@
       "RelativeMoniker": "D:0:0:{FE1CD092-0270-4977-BAC3-BD0E6A54B14E}|Dms.Infrastructure\\Dms.Infrastructure.csproj|solutionrelative:dms.infrastructure\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\Migrations\\20260523072925_BaseEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Dms.Infrastructure\\Migrations\\20260523072925_BaseEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D8ED7F78-F6E7-458B-A919-568DB07EA89B}|API\\API.csproj|d:\\project\\dienlanh\\dienlanh\\api\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8ED7F78-F6E7-458B-A919-568DB07EA89B}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -85,6 +81,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{D8ED7F78-F6E7-458B-A919-568DB07EA89B}|API\\API.csproj|d:\\project\\dienlanh\\dienlanh\\api\\api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{D8ED7F78-F6E7-458B-A919-568DB07EA89B}|API\\API.csproj|solutionrelative:api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE1CD092-0270-4977-BAC3-BD0E6A54B14E}|Dms.Infrastructure\\Dms.Infrastructure.csproj|d:\\project\\dienlanh\\dienlanh\\api\\dms.infrastructure\\migrations\\20260523072925_baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE1CD092-0270-4977-BAC3-BD0E6A54B14E}|Dms.Infrastructure\\Dms.Infrastructure.csproj|solutionrelative:dms.infrastructure\\migrations\\20260523072925_baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -140,12 +140,11 @@
               "RelativeToolTip": "Dms.Infrastructure\\Services\\TokenService.cs",
               "ViewState": "AgIAAIUAAAAAAAAAAAAQwKoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T07:33:59.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T07:33:59.862Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 20,
               "Title": "20260523072925_BaseEntity.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\Migrations\\20260523072925_BaseEntity.cs",
               "RelativeDocumentMoniker": "Dms.Infrastructure\\Migrations\\20260523072925_BaseEntity.cs",
@@ -153,12 +152,11 @@
               "RelativeToolTip": "Dms.Infrastructure\\Migrations\\20260523072925_BaseEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T07:29:26.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T07:29:26.158Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "Dms.Infrastructure\\DependencyInjection.cs",
@@ -166,12 +164,11 @@
               "RelativeToolTip": "Dms.Infrastructure\\DependencyInjection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T07:16:19.66Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T07:16:19.66Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Application\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "Dms.Application\\DependencyInjection.cs",
@@ -179,12 +176,11 @@
               "RelativeToolTip": "Dms.Application\\DependencyInjection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T02:09:05.91Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T02:09:05.91Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "ITokenService.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Application\\Interfaces\\ITokenService.cs",
               "RelativeDocumentMoniker": "Dms.Application\\Interfaces\\ITokenService.cs",
@@ -192,12 +188,11 @@
               "RelativeToolTip": "Dms.Application\\Interfaces\\ITokenService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T10:52:32.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T10:52:32.878Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "AuthDtos.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Application\\DTOs\\AuthDtos.cs",
               "RelativeDocumentMoniker": "Dms.Application\\DTOs\\AuthDtos.cs",
@@ -205,12 +200,11 @@
               "RelativeToolTip": "Dms.Application\\DTOs\\AuthDtos.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T10:52:11.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T10:52:11.502Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "ExceptionMiddleware.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\Middlewares\\ExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "API\\Middlewares\\ExceptionMiddleware.cs",
@@ -218,12 +212,11 @@
               "RelativeToolTip": "API\\Middlewares\\ExceptionMiddleware.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T09:32:16.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T09:32:16.199Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "ApiException.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\Middlewares\\ApiException.cs",
               "RelativeDocumentMoniker": "API\\Middlewares\\ApiException.cs",
@@ -231,12 +224,11 @@
               "RelativeToolTip": "API\\Middlewares\\ApiException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T09:32:14.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T09:32:14.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "BaseApiController.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\Controllers\\BaseApiController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\BaseApiController.cs",
@@ -244,12 +236,11 @@
               "RelativeToolTip": "API\\Controllers\\BaseApiController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T09:32:03.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T09:32:03.435Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\CategoriesController.cs",
@@ -257,12 +248,11 @@
               "RelativeToolTip": "API\\Controllers\\CategoriesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T09:31:56.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T09:31:56.657Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Domain\\Interfaces\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "Dms.Domain\\Interfaces\\IUnitOfWork.cs",
@@ -270,12 +260,11 @@
               "RelativeToolTip": "Dms.Domain\\Interfaces\\IUnitOfWork.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T09:31:47.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T09:31:47.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Domain\\Interfaces\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "Dms.Domain\\Interfaces\\IGenericRepository.cs",
@@ -283,12 +272,11 @@
               "RelativeToolTip": "Dms.Domain\\Interfaces\\IGenericRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T09:31:46.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T09:31:46.355Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "CreateCategoryCommandValidator.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Application\\Features\\Categories\\Commands\\CreateCategoryCommandValidator.cs",
               "RelativeDocumentMoniker": "Dms.Application\\Features\\Categories\\Commands\\CreateCategoryCommandValidator.cs",
@@ -296,12 +284,11 @@
               "RelativeToolTip": "Dms.Application\\Features\\Categories\\Commands\\CreateCategoryCommandValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T09:31:26.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T09:31:26.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "CreateCategoryCommand.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Application\\Features\\Categories\\Commands\\CreateCategoryCommand.cs",
               "RelativeDocumentMoniker": "Dms.Application\\Features\\Categories\\Commands\\CreateCategoryCommand.cs",
@@ -309,12 +296,11 @@
               "RelativeToolTip": "Dms.Application\\Features\\Categories\\Commands\\CreateCategoryCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T09:31:24.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T09:31:24.16Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "CategoryDto.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Application\\DTOs\\CategoryDto.cs",
               "RelativeDocumentMoniker": "Dms.Application\\DTOs\\CategoryDto.cs",
@@ -322,12 +308,11 @@
               "RelativeToolTip": "Dms.Application\\DTOs\\CategoryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T09:31:18.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T09:31:18.075Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "Dms.Application.csproj",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Application\\Dms.Application.csproj",
               "RelativeDocumentMoniker": "Dms.Application\\Dms.Application.csproj",
@@ -335,12 +320,11 @@
               "RelativeToolTip": "Dms.Application\\Dms.Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-22T09:31:15.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T09:31:15.192Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Domain\\Common\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Dms.Domain\\Common\\BaseEntity.cs",
@@ -348,12 +332,11 @@
               "RelativeToolTip": "Dms.Domain\\Common\\BaseEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T04:38:53.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T04:38:53.832Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "Dms.Application.Shared.csproj",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Application.Shared\\Dms.Application.Shared.csproj",
               "RelativeDocumentMoniker": "Dms.Application.Shared\\Dms.Application.Shared.csproj",
@@ -361,12 +344,11 @@
               "RelativeToolTip": "Dms.Application.Shared\\Dms.Application.Shared.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-22T04:37:31.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T04:37:31.557Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "API.csproj",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\API.csproj",
               "RelativeDocumentMoniker": "API\\API.csproj",
@@ -374,12 +356,11 @@
               "RelativeToolTip": "API\\API.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-22T04:32:48.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T04:32:48.219Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\Program.cs",
               "RelativeDocumentMoniker": "API\\Program.cs",
@@ -387,8 +368,7 @@
               "RelativeToolTip": "API\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T03:53:07.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-21T03:53:07.886Z"
             },
             {
               "$type": "Document",
@@ -398,7 +378,7 @@
               "RelativeDocumentMoniker": "API\\appsettings.json",
               "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\appsettings.json",
               "RelativeToolTip": "API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-05-21T03:53:04.026Z",
               "EditorCaption": ""
