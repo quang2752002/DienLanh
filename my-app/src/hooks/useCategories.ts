@@ -1,6 +1,6 @@
-import { useCrud } from './useCrud';
-import { categoryApi } from '../apis/categoryApi';
-import { Category, CreateCategoryInput } from '../types/category';
+import { useCrud } from '@/hooks/useCrud';
+import { categoryApi } from '@/apis/categoryApi';
+import { Category, CreateCategoryInput } from '@/types/category';
 
 export const useCategories = () => {
   const {

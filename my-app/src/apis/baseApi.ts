@@ -1,4 +1,4 @@
-import api from '../libs/axios';
+import api from '@/lib/axios';
 
 export class BaseApiService<T, TCreate = any, TUpdate = any> {
   protected endpoint: string;

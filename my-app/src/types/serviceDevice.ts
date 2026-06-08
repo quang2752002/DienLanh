@@ -5,7 +5,13 @@ export interface ServiceDevice {
   modelNumber?: string;
   serialNumber?: string;
   description?: string;
+  price?: string;
+  rating?: number;
+  icon?: string;
+  isActive?: boolean;
+  content?: string;
   categoryId: string;
+  categoryName?: string;
   created?: string;
 }
 
@@ -15,5 +21,10 @@ export interface CreateServiceDeviceInput {
   modelNumber?: string;
   serialNumber?: string;
   description?: string;
+  price?: string;
+  rating?: number;
+  icon?: string;
+  isActive?: boolean;
+  content?: string;
   categoryId: string;
 }

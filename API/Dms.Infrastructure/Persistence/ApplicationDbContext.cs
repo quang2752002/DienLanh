@@ -15,6 +15,9 @@ namespace Dms.Infrastructure.Persistence
         public DbSet<Category> Categories => Set<Category>();
         public DbSet<ServiceDevice> ServiceDevices => Set<ServiceDevice>();
         public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
+        public DbSet<Menu> Menus => Set<Menu>();
+        public DbSet<SystemSetting> SystemSettings => Set<SystemSetting>();
+        public DbSet<Tip> Tips => Set<Tip>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -49,6 +52,32 @@ namespace Dms.Infrastructure.Persistence
                     .WithMany(u => u.RefreshTokens)
                     .HasForeignKey(r => r.UserId)
                     .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<Menu>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Title).IsRequired().HasMaxLength(150);
+                entity.Property(e => e.Url).IsRequired().HasMaxLength(250);
+                entity.Property(e => e.Icon).HasMaxLength(100);
+            });
+
+            modelBuilder.Entity<SystemSetting>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Key).IsRequired().HasMaxLength(100);
+                entity.Property(e => e.Value).IsRequired().HasMaxLength(2000);
+                entity.Property(e => e.Description).HasMaxLength(500);
+            });
+
+            modelBuilder.Entity<Tip>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Title).IsRequired().HasMaxLength(250);
+                entity.Property(e => e.ShortDescription).IsRequired().HasMaxLength(500);
+                entity.Property(e => e.Content).IsRequired();
+                entity.Property(e => e.ImageUrl).HasMaxLength(500);
+                entity.Property(e => e.Author).HasMaxLength(100);
             });
 
             // Đổi tên các bảng Identity thành tên thân thiện hơn

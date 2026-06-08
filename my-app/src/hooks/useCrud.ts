@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { BaseApiService } from '../apis/baseApi';
+import { BaseApiService } from '@/apis/baseApi';
 
 export function useCrud<T, TCreate = any, TUpdate = any>(
   apiService: BaseApiService<T, TCreate, TUpdate>,

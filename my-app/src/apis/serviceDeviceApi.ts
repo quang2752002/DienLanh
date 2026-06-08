@@ -1,5 +1,5 @@
 import { BaseApiService } from './baseApi';
-import { ServiceDevice, CreateServiceDeviceInput } from '../types/serviceDevice';
+import { ServiceDevice, CreateServiceDeviceInput } from '@/types/serviceDevice';
 
 class ServiceDeviceApiService extends BaseApiService<ServiceDevice, CreateServiceDeviceInput, CreateServiceDeviceInput> {
   constructor() {

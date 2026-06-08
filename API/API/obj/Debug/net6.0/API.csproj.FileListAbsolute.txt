@@ -85,7 +85,6 @@ D:\Project\DienLanh\DienLanh\API\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 D:\Project\DienLanh\DienLanh\API\API\obj\Debug\net6.0\ref\API.dll
 D:\Project\DienLanh\DienLanh\API\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Project\DienLanh\DienLanh\API\API\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\Project\DienLanh\DienLanh\API\API\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
 D:\Project\DienLanh\DienLanh\API\API\bin\Debug\net6.0\Google.Apis.dll
 D:\Project\DienLanh\DienLanh\API\API\bin\Debug\net6.0\Google.Apis.Auth.dll
 D:\Project\DienLanh\DienLanh\API\API\bin\Debug\net6.0\Google.Apis.Core.dll

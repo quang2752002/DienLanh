@@ -6,6 +6,9 @@ namespace Dms.Domain.Interfaces
     {
         IGenericRepository<Category> Categories { get; }
         IGenericRepository<ServiceDevice> ServiceDevices { get; }
+        IGenericRepository<Menu> Menus { get; }
+        IGenericRepository<SystemSetting> SystemSettings { get; }
+        IGenericRepository<Tip> Tips { get; }
         Task<int> CompleteAsync();
     }
 }

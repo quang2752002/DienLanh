@@ -9,6 +9,9 @@ namespace Dms.Infrastructure.Repositories
         private readonly ApplicationDbContext _context;
         private IGenericRepository<Category>? _categories;
         private IGenericRepository<ServiceDevice>? _serviceDevices;
+        private IGenericRepository<Menu>? _menus;
+        private IGenericRepository<SystemSetting>? _systemSettings;
+        private IGenericRepository<Tip>? _tips;
 
         public UnitOfWork(ApplicationDbContext context)
         {
@@ -20,6 +23,15 @@ namespace Dms.Infrastructure.Repositories
 
         public IGenericRepository<ServiceDevice> ServiceDevices => 
             _serviceDevices ??= new GenericRepository<ServiceDevice>(_context);
+
+        public IGenericRepository<Menu> Menus => 
+            _menus ??= new GenericRepository<Menu>(_context);
+
+        public IGenericRepository<SystemSetting> SystemSettings => 
+            _systemSettings ??= new GenericRepository<SystemSetting>(_context);
+
+        public IGenericRepository<Tip> Tips => 
+            _tips ??= new GenericRepository<Tip>(_context);
 
         public async Task<int> CompleteAsync()
         {
