@@ -29,7 +29,8 @@ export default function Login() {
       console.log("Login Success", res);
       router.push("/");
     } catch (err: any) {
-      setError(err.response?.data || "Login failed");
+      const msg = err.response?.data?.message || (typeof err.response?.data === "string" ? err.response.data : null) || "Login failed";
+      setError(msg);
     } finally {
       setLoading(false);
     }
@@ -43,7 +44,8 @@ export default function Login() {
       console.log("Google Login Success", res);
       router.push("/");
     } catch (err: any) {
-      setError(err.response?.data || "Google Login failed");
+      const msg = err.response?.data?.message || (typeof err.response?.data === "string" ? err.response.data : null) || "Google Login failed";
+      setError(msg);
     } finally {
       setLoading(false);
     }

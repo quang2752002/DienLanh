@@ -131,40 +131,56 @@
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "Dms.Infrastructure\\Services\\TokenService.cs",
-              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\Services\\TokenService.cs",
-              "RelativeToolTip": "Dms.Infrastructure\\Services\\TokenService.cs",
-              "ViewState": "AgIAAIUAAAAAAAAAAAAQwKoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T07:33:59.862Z"
+              "$type": "Bookmark",
+              "Name": "ST:61:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "20260523072925_BaseEntity.cs",
-              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\Migrations\\20260523072925_BaseEntity.cs",
-              "RelativeDocumentMoniker": "Dms.Infrastructure\\Migrations\\20260523072925_BaseEntity.cs",
-              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\Migrations\\20260523072925_BaseEntity.cs",
-              "RelativeToolTip": "Dms.Infrastructure\\Migrations\\20260523072925_BaseEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T07:29:26.158Z"
+              "$type": "Bookmark",
+              "Name": "ST:62:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "Dms.Infrastructure\\DependencyInjection.cs",
-              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\DependencyInjection.cs",
-              "RelativeToolTip": "Dms.Infrastructure\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T07:16:19.66Z"
+              "$type": "Bookmark",
+              "Name": "ST:60:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:63:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:64:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:65:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:68:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:72:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:73:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:76:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:78:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:79:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:81:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
               "$type": "Document",
@@ -249,6 +265,55 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-22T09:31:56.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "API\\appsettings.json",
+              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\appsettings.json",
+              "RelativeToolTip": "API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-21T03:53:04.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Dms.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "Dms.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T07:16:19.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20260523072925_BaseEntity.cs",
+              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\Migrations\\20260523072925_BaseEntity.cs",
+              "RelativeDocumentMoniker": "Dms.Infrastructure\\Migrations\\20260523072925_BaseEntity.cs",
+              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\Migrations\\20260523072925_BaseEntity.cs",
+              "RelativeToolTip": "Dms.Infrastructure\\Migrations\\20260523072925_BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T07:29:26.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Dms.Infrastructure\\Services\\TokenService.cs",
+              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\Dms.Infrastructure\\Services\\TokenService.cs",
+              "RelativeToolTip": "Dms.Infrastructure\\Services\\TokenService.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAQwKoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T07:33:59.862Z"
             },
             {
               "$type": "Document",
@@ -369,19 +434,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-21T03:53:07.886Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\appsettings.json",
-              "RelativeDocumentMoniker": "API\\appsettings.json",
-              "ToolTip": "D:\\Project\\DienLanh\\DienLanh\\API\\API\\appsettings.json",
-              "RelativeToolTip": "API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-21T03:53:04.026Z",
-              "EditorCaption": ""
             }
           ]
         }
