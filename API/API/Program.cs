@@ -53,4 +53,23 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// Tự động khởi tạo và seed dữ liệu khi chạy ứng dụng
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<ApplicationDbContext>();
+        var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+        var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+        
+        await DbInitializer.SeedDataAsync(context, userManager, roleManager);
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "Một lỗi đã xảy ra trong quá trình seed dữ liệu.");
+    }
+}
+
 app.Run();

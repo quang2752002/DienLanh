@@ -12,8 +12,7 @@ export const metadata: Metadata = {
 };
 
 import Providers from "@/components/Providers";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import LayoutWrapper from "@/components/LayoutWrapper";
 
 export default function RootLayout({
   children,
@@ -24,11 +23,9 @@ export default function RootLayout({
     <html lang="vi">
       <body className={`${inter.className} d-flex flex-column min-vh-100 bg-light`}>
         <Providers>
-          <Navbar />
-          <div className="flex-grow-1">
+          <LayoutWrapper>
             {children}
-          </div>
-          <Footer />
+          </LayoutWrapper>
         </Providers>
       </body>
     </html>

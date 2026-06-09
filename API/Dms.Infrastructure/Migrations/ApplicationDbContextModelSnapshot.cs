@@ -125,7 +125,7 @@ namespace Dms.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("Dms.Domain.Entities.Menu", b =>
@@ -167,7 +167,7 @@ namespace Dms.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Menus");
+                    b.ToTable("Menus", (string)null);
                 });
 
             modelBuilder.Entity("Dms.Domain.Entities.RefreshToken", b =>
@@ -200,7 +200,7 @@ namespace Dms.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("RefreshTokens");
+                    b.ToTable("RefreshTokens", (string)null);
                 });
 
             modelBuilder.Entity("Dms.Domain.Entities.ServiceDevice", b =>
@@ -264,7 +264,7 @@ namespace Dms.Infrastructure.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("ServiceDevices");
+                    b.ToTable("ServiceDevices", (string)null);
                 });
 
             modelBuilder.Entity("Dms.Domain.Entities.SystemSetting", b =>
@@ -300,7 +300,7 @@ namespace Dms.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SystemSettings");
+                    b.ToTable("SystemSettings", (string)null);
                 });
 
             modelBuilder.Entity("Dms.Domain.Entities.Tip", b =>
@@ -348,7 +348,7 @@ namespace Dms.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tips");
+                    b.ToTable("Tips", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
