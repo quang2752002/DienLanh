@@ -12,7 +12,7 @@ namespace Dms.Domain.Entities
         public bool IsActive => !IsRevoked && !IsExpired;
 
         // Liên kết đến ApplicationUser
-        public string UserId { get; set; } = string.Empty;
+        public int UserId { get; set; }
         public ApplicationUser? User { get; set; }
     }
 }

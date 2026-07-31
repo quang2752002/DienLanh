@@ -709,6 +709,7 @@
       },
       "Dms.Domain/1.0.0": {
         "dependencies": {
+          "Google.Apis.Core": "1.74.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.0"
         },
         "runtime": {

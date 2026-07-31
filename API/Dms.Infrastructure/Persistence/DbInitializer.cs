@@ -9,7 +9,7 @@ namespace Dms.Infrastructure.Persistence
         public static async Task SeedDataAsync(
             ApplicationDbContext context,
             UserManager<ApplicationUser> userManager,
-            RoleManager<IdentityRole> roleManager)
+            RoleManager<IdentityRole<int>> roleManager)
         {
             // Đảm bảo Database đã được tạo hoặc được migrate
             await context.Database.MigrateAsync();
@@ -21,7 +21,7 @@ namespace Dms.Infrastructure.Persistence
                 var roleExist = await roleManager.RoleExistsAsync(roleName);
                 if (!roleExist)
                 {
-                    await roleManager.CreateAsync(new IdentityRole(roleName));
+                    await roleManager.CreateAsync(new IdentityRole<int>(roleName));
                 }
             }
 

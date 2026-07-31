@@ -10,10 +10,12 @@ namespace Dms.Domain.Common
     public abstract class BaseEntity
     {
         [Key]
-        public string Id { get; set; } = Guid.NewGuid().ToString();
+        public int Id { get; set; } 
         public DateTime? Created { get; set; }
         public string? CreatedBy { get; set; }
         public string? LastModifiedBy { get; set; }
         public DateTime? LastModified { get; set; }
+
+        public bool? IsDeleted { get; set; }=false;
     }
 }

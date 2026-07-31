@@ -39,7 +39,7 @@ namespace Dms.Infrastructure.Services
 
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.Sub,   user.Id),
+                new Claim(JwtRegisteredClaimNames.Sub,   user.Id.ToString()),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email ?? string.Empty),
                 new Claim(JwtRegisteredClaimNames.Jti,   Guid.NewGuid().ToString()),
                 new Claim("username", user.UserName ?? string.Empty),
@@ -110,13 +110,13 @@ namespace Dms.Infrastructure.Services
         {
             // Lấy principal từ access token hết hạn (không kiểm tra expiry)
             var principal = GetPrincipalFromExpiredToken(accessToken);
-            var userId    = principal?.FindFirstValue(ClaimTypes.NameIdentifier)
+            var userIdStr = principal?.FindFirstValue(ClaimTypes.NameIdentifier)
                           ?? principal?.FindFirstValue(JwtRegisteredClaimNames.Sub);
 
-            if (userId == null)
+            if (string.IsNullOrEmpty(userIdStr) || !int.TryParse(userIdStr, out var userId))
                 throw new UnauthorizedAccessException("Access token không hợp lệ.");
 
-            var user = await _userManager.FindByIdAsync(userId);
+            var user = await _userManager.FindByIdAsync(userIdStr);
             if (user == null)
                 throw new UnauthorizedAccessException("Người dùng không tồn tại.");
 
@@ -134,7 +134,7 @@ namespace Dms.Infrastructure.Services
             return await CreateAuthResponse(user);
         }
 
-        public async Task RevokeAsync(string userId)
+        public async Task RevokeAsync(int userId)
         {
             var tokens = await _context.RefreshTokens
                 .Where(r => r.UserId == userId && r.Revoked == null)

@@ -1184,6 +1184,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Google.Apis.Core": "1.74.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.0"
         },
         "compile": {

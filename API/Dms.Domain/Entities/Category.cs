@@ -8,6 +8,5 @@ namespace Dms.Domain.Entities
         public string? Description { get; set; }
         public bool IsActive { get; set; } = true;
 
-        public ICollection<ServiceDevice> ServiceDevices { get; set; } = new List<ServiceDevice>();
     }
 }

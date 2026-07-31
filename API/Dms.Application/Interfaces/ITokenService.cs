@@ -9,6 +9,6 @@ namespace Dms.Application.Interfaces
         string GenerateRefreshToken();
         Task<AuthResponseDto> CreateAuthResponse(ApplicationUser user);
         Task<AuthResponseDto> RefreshAsync(string accessToken, string refreshToken);
-        Task RevokeAsync(string userId);
+        Task RevokeAsync(int userId);
     }
 }
