@@ -3,6 +3,8 @@ using Dms.Domain.Interfaces;
 using Dms.Infrastructure.Persistence;
 using Dms.Infrastructure.Repositories;
 using Dms.Infrastructure.Services;
+using Dms.Infrastructure.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +29,10 @@ namespace Dms.Infrastructure
             
             // Recaptcha Service
             services.AddHttpClient<IRecaptchaService,RecaptchaService>();
+
+            // Custom Authorization Permission Policy Provider & Handler
+            services.AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>();
+            services.AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>();
 
             return services;
         }

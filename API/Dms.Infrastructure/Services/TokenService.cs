@@ -18,15 +18,21 @@ namespace Dms.Infrastructure.Services
         private readonly IConfiguration _configuration;
         private readonly ApplicationDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly RoleManager<IdentityRole<int>> _roleManager;
 
-        public TokenService(IConfiguration configuration, ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        public TokenService(
+            IConfiguration configuration,
+            ApplicationDbContext context,
+            UserManager<ApplicationUser> userManager,
+            RoleManager<IdentityRole<int>> roleManager)
         {
             _configuration = configuration;
             _context = context;
             _userManager = userManager;
+            _roleManager = roleManager;
         }
 
-        public string GenerateAccessToken(ApplicationUser user, IList<string> roles)
+        public string GenerateAccessToken(ApplicationUser user, IList<string> roles, IEnumerable<string>? permissions = null)
         {
             var jwtSettings = _configuration.GetSection("JwtSettings");
             var secretKey = jwtSettings["SecretKey"]!;
@@ -49,6 +55,12 @@ namespace Dms.Infrastructure.Services
             foreach (var role in roles)
                 claims.Add(new Claim(ClaimTypes.Role, role));
 
+            if (permissions != null)
+            {
+                foreach (var permission in permissions)
+                    claims.Add(new Claim("permission", permission));
+            }
+
             var token = new JwtSecurityToken(
                 issuer:             issuer,
                 audience:           audience,
@@ -69,8 +81,24 @@ namespace Dms.Infrastructure.Services
 
         public async Task<AuthResponseDto> CreateAuthResponse(ApplicationUser user)
         {
-            var roles       = await _userManager.GetRolesAsync(user);
-            var accessToken = GenerateAccessToken(user, roles);
+            var roles = await _userManager.GetRolesAsync(user);
+            var permissionsList = new HashSet<string>();
+
+            foreach (var roleName in roles)
+            {
+                var role = await _roleManager.FindByNameAsync(roleName);
+                if (role != null)
+                {
+                    var roleClaims = await _roleManager.GetClaimsAsync(role);
+                    foreach (var claim in roleClaims.Where(c => c.Type == "permission"))
+                    {
+                        permissionsList.Add(claim.Value);
+                    }
+                }
+            }
+
+            var permissions = permissionsList.ToList();
+            var accessToken = GenerateAccessToken(user, roles, permissions);
             var refreshTokenStr = GenerateRefreshToken();
 
             // Thu hồi tất cả refresh token cũ còn active
@@ -103,6 +131,7 @@ namespace Dms.Infrastructure.Services
                 Username          = user.UserName ?? string.Empty,
                 FullName          = user.FullName,
                 Role              = roles.FirstOrDefault() ?? "User",
+                Permissions       = permissions,
             };
         }
 
