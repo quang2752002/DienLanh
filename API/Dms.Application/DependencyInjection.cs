@@ -11,6 +11,9 @@ namespace Dms.Application
         {
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+            services.AddScoped<Dms.Application.Interfaces.IRepairService, Dms.Application.Services.RepairService>();
             
             return services;
         }

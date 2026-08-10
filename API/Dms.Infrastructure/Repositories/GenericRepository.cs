@@ -20,6 +20,16 @@ namespace Dms.Infrastructure.Repositories
             return await _context.Set<T>().FindAsync(id);
         }
 
+        public async Task<T?> GetByIdAsync(int id)
+        {
+            return await _context.Set<T>().FindAsync(id);
+        }
+
+        public async Task<T?> GetByIdAsync(object id)
+        {
+            return await _context.Set<T>().FindAsync(id);
+        }
+
         public async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _context.Set<T>().ToListAsync();
