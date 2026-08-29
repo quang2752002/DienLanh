@@ -2,7 +2,9 @@ export interface User {
   id: string;
   username: string;
   fullName: string;
-  role: string;
+  email?: string;
+  role?: string;
+  roles?: string[];
 }
 
 export interface AuthResponse {

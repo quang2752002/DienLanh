@@ -200,7 +200,7 @@ export default function Navbar() {
                         >
                           {menu.icon && <i className={`bi ${menu.icon}`}></i>}
                           <span>{menu.title}</span>
-                          <i className={`bi bi-chevron-down ${styles.dropdownIcon} ${isDropdownOpen ? styles.dropdownIconOpen : ''} ms-1`}></i>
+                          <i className={`bi bi-chevron-down ${styles.dropdownIcon} ${isDropdownOpen ? styles.dropdownIconOpen : ''} ms-1 d-none d-lg-inline-block`}></i>
                         </a>
                       ) : (
                         <Link 
@@ -214,7 +214,7 @@ export default function Navbar() {
                         >
                           {menu.icon && <i className={`bi ${menu.icon}`}></i>}
                           <span>{menu.title}</span>
-                          <i className={`bi bi-chevron-down ${styles.dropdownIcon} ${isDropdownOpen ? styles.dropdownIconOpen : ''} ms-1`}></i>
+                          <i className={`bi bi-chevron-down ${styles.dropdownIcon} ${isDropdownOpen ? styles.dropdownIconOpen : ''} ms-1 d-none d-lg-inline-block`}></i>
                         </Link>
                       )}
 
@@ -225,7 +225,7 @@ export default function Navbar() {
                         onClick={(e) => toggleDropdown(menu.id, e)}
                         aria-label="Mở rộng menu con"
                       >
-                        <i className={`bi ${isDropdownOpen ? 'bi-dash-circle-fill text-primary' : 'bi-plus-circle'}`}></i>
+                        <i className={`bi ${isDropdownOpen ? 'bi-chevron-up text-primary fw-bold' : 'bi-chevron-down'}`}></i>
                       </button>
                     </div>
 

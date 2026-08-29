@@ -9,6 +9,8 @@ export const useCategories = () => {
     error,
     refresh,
     create: createCategory,
+    update: updateCategory,
+    remove: removeCategory,
   } = useCrud<Category, CreateCategoryInput, CreateCategoryInput>(categoryApi);
 
   return {
@@ -17,5 +19,7 @@ export const useCategories = () => {
     error,
     refresh,
     createCategory,
+    updateCategory,
+    removeCategory,
   };
 };

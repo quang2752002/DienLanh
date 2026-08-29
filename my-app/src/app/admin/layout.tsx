@@ -110,6 +110,14 @@ export default function AdminLayout({
           </Link>
         </li>
 
+        {/* Nav Item - Repair Booking Analytics (Biểu đồ phân tích) */}
+        <li className={`nav-item ${isActive('/admin/analytics')}`}>
+          <Link href="/admin/analytics" className="nav-link">
+            <i className="bi bi-pie-chart-fill me-2"></i>
+            <span>Biểu Đồ Lịch Đặt</span>
+          </Link>
+        </li>
+
         {/* Nav Item - Menu */}
         <li className={`nav-item ${isActive('/admin/menu')}`}>
           <Link href="/admin/menu" className="nav-link">

@@ -254,6 +254,113 @@ namespace Dms.Infrastructure.Persistence
                 await context.Repairs.AddRangeAsync(repairs);
                 await context.SaveChangesAsync();
             }
+
+            // Khởi tạo dữ liệu mẫu Đặt Lịch Sửa Chữa (RepairBooking) nếu chưa có dữ liệu
+            if (!await context.RepairBookings.AnyAsync())
+            {
+                var sampleRepairs = await context.Repairs.Take(4).ToListAsync();
+                var r1 = sampleRepairs.ElementAtOrDefault(0)?.Id ?? 1;
+                var r2 = sampleRepairs.ElementAtOrDefault(1)?.Id ?? r1;
+                var r3 = sampleRepairs.ElementAtOrDefault(2)?.Id ?? r1;
+                var r4 = sampleRepairs.ElementAtOrDefault(3)?.Id ?? r2;
+
+                var now = DateTime.UtcNow;
+
+                var initialBookings = new List<RepairBooking>
+                {
+                    new RepairBooking
+                    {
+                        RepairId = r1,
+                        CustomerName = "Nguyễn Văn An",
+                        PhoneNumber = "0988123456",
+                        BookingDate = now.AddDays(-6),
+                        Notes = "Máy lạnh Daikin 1.5HP không phả hơi lạnh, phát tiếng kêu to",
+                        Status = "Completed",
+                        Created = now.AddDays(-6),
+                        CreatedBy = "Customer"
+                    },
+                    new RepairBooking
+                    {
+                        RepairId = r2,
+                        CustomerName = "Trần Thị Bích",
+                        PhoneNumber = "0912345678",
+                        BookingDate = now.AddDays(-5),
+                        Notes = "Tủ lạnh Panasonic Inverter ngăn mát không lạnh, đèn nhấp nháy",
+                        Status = "Completed",
+                        Created = now.AddDays(-5),
+                        CreatedBy = "Customer"
+                    },
+                    new RepairBooking
+                    {
+                        RepairId = r1,
+                        CustomerName = "Lê Hoàng Long",
+                        PhoneNumber = "0909888999",
+                        BookingDate = now.AddDays(-4),
+                        Notes = "Vệ sinh và đo áp suất nạp bổ sung gas máy lạnh tại văn phòng công ty",
+                        Status = "Confirmed",
+                        Created = now.AddDays(-4),
+                        CreatedBy = "Customer"
+                    },
+                    new RepairBooking
+                    {
+                        RepairId = r3,
+                        CustomerName = "Phạm Minh Đức",
+                        PhoneNumber = "0977665544",
+                        BookingDate = now.AddDays(-3),
+                        Notes = "Máy giặt Electrolux lồng ngang không vắt được và báo lỗi E20",
+                        Status = "Confirmed",
+                        Created = now.AddDays(-3),
+                        CreatedBy = "Customer"
+                    },
+                    new RepairBooking
+                    {
+                        RepairId = r2,
+                        CustomerName = "Vũ Thu Trang",
+                        PhoneNumber = "0933221100",
+                        BookingDate = now.AddDays(-2),
+                        Notes = "Tủ lạnh bị đọng sương nhiều và chảy nước phía sau lưng",
+                        Status = "Pending",
+                        Created = now.AddDays(-2),
+                        CreatedBy = "Customer"
+                    },
+                    new RepairBooking
+                    {
+                        RepairId = r1,
+                        CustomerName = "Hoàng Anh Tuấn",
+                        PhoneNumber = "0966554433",
+                        BookingDate = now.AddDays(-1),
+                        Notes = "Cần kiểm tra bo mạch điều khiển điều hòa Daikin Inverter gấp trong chiều nay",
+                        Status = "Pending",
+                        Created = now.AddDays(-1),
+                        CreatedBy = "Customer"
+                    },
+                    new RepairBooking
+                    {
+                        RepairId = r4,
+                        CustomerName = "Đặng Thanh Thảo",
+                        PhoneNumber = "0944332211",
+                        BookingDate = now.AddDays(1),
+                        Notes = "Khách hàng yêu cầu khảo sát vị trí lắp đặt máy lạnh âm trần tại căn hộ mới",
+                        Status = "Pending",
+                        Created = now,
+                        CreatedBy = "Customer"
+                    },
+                    new RepairBooking
+                    {
+                        RepairId = r3,
+                        CustomerName = "Bùi Quốc Huy",
+                        PhoneNumber = "0987112233",
+                        BookingDate = now.AddDays(2),
+                        Notes = "Khách bận việc đột xuất xin dời lịch sang tuần sau",
+                        Status = "Cancelled",
+                        Created = now,
+                        CreatedBy = "Customer"
+                    }
+                };
+
+                await context.RepairBookings.AddRangeAsync(initialBookings);
+                await context.SaveChangesAsync();
+            }
         }
     }
 }

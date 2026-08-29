@@ -192,8 +192,8 @@ export default function RepairDetailPage() {
               {/* Nội dung bài viết chi tiết (Render HTML từ CKEditor) */}
               <div className="service-content text-secondary lh-lg mb-5">
                 {activeRepair.content ? (
-                  <div 
-                    dangerouslySetInnerHTML={{ __html: activeRepair.content }} 
+                  <div
+                    dangerouslySetInnerHTML={{ __html: activeRepair.content }}
                     className="ck-content"
                   />
                 ) : (
@@ -240,56 +240,56 @@ export default function RepairDetailPage() {
               <form onSubmit={handleBookingSubmit}>
                 <div className="mb-3">
                   <label className="form-label small fw-semibold text-secondary">Họ và Tên *</label>
-                  <input 
-                    type="text" 
-                    className="form-control rounded-3 py-2" 
-                    placeholder="Nguyễn Văn A" 
+                  <input
+                    type="text"
+                    className="form-control rounded-3 py-2"
+                    placeholder="Nguyễn Văn A"
                     value={fullname}
                     onChange={(e) => setFullname(e.target.value)}
                     disabled={isBooked}
-                    required 
+                    required
                   />
                 </div>
 
                 <div className="mb-3">
                   <label className="form-label small fw-semibold text-secondary">Số Điện Thoại *</label>
-                  <input 
-                    type="tel" 
-                    className="form-control rounded-3 py-2" 
-                    placeholder="0988xxxxxx" 
+                  <input
+                    type="tel"
+                    className="form-control rounded-3 py-2"
+                    placeholder="0988xxxxxx"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     disabled={isBooked}
-                    required 
+                    required
                   />
                 </div>
 
                 <div className="mb-3">
                   <label className="form-label small fw-semibold text-secondary">Ngày muốn kiểm tra *</label>
-                  <input 
-                    type="date" 
-                    className="form-control rounded-3 py-2" 
+                  <input
+                    type="date"
+                    className="form-control rounded-3 py-2"
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
                     disabled={isBooked}
-                    required 
+                    required
                   />
                 </div>
 
                 <div className="mb-4">
                   <label className="form-label small fw-semibold text-secondary">Ghi chú tình trạng hỏng hóc & địa chỉ</label>
-                  <textarea 
-                    className="form-control rounded-3" 
-                    rows={3} 
-                    placeholder="VD: Điều hòa không lạnh, chảy nước ở mặt lạnh, địa chỉ..." 
+                  <textarea
+                    className="form-control rounded-3"
+                    rows={3}
+                    placeholder="VD: Điều hòa không lạnh, chảy nước ở mặt lạnh, địa chỉ..."
                     value={notes}
                     onChange={(e) => setNotes(e.target.value)}
                     disabled={isBooked}
                   />
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="btn btn-warning w-100 rounded-pill py-3 fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2"
                   disabled={isBooked}
                 >
