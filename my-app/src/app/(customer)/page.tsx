@@ -379,7 +379,7 @@ export default function Home() {
                   </div>
 
                   <div className="card-footer bg-white border-0 p-4 pt-0 d-flex gap-2">
-                    <Link href={`/repair/${service.id}`} className="btn btn-outline-primary flex-grow-1 rounded-pill d-flex align-items-center justify-content-center gap-2 small">
+                    <Link href={`/repair/${service.slug || service.id}`} className="btn btn-outline-primary flex-grow-1 rounded-pill d-flex align-items-center justify-content-center gap-2 small">
                       <i className="bi bi-info-circle-fill"></i>
                       <span>Xem chi tiết</span>
                     </Link>
@@ -430,7 +430,7 @@ export default function Home() {
                   <li><i className="bi bi-check-circle-fill text-success me-2"></i>Đo áp suất gas và dòng tải ampe</li>
                   <li><i className="bi bi-check-circle-fill text-success me-2"></i>Bảo hành chảy nước 30 ngày</li>
                 </ul>
-                <Link href="/repair/1" className="btn btn-outline-primary rounded-pill w-100 py-2 fw-semibold mt-auto">
+                <Link href="/repair/bao-duong-ve-sinh-may-lanh" className="btn btn-outline-primary rounded-pill w-100 py-2 fw-semibold mt-auto">
                   Đặt Lịch Ngay
                 </Link>
               </div>
@@ -459,7 +459,7 @@ export default function Home() {
                   <li><i className="bi bi-check-circle-fill text-success me-2"></i>Linh kiện chính hãng 100%</li>
                   <li><i className="bi bi-check-circle-fill text-success me-2"></i>Bảo hành vàng từ 6 - 12 tháng</li>
                 </ul>
-                <Link href="/repair/2" className="btn btn-primary rounded-pill w-100 py-2 fw-semibold mt-auto shadow">
+                <Link href="/repair/sua-chua-tu-lanh-inverter" className="btn btn-primary rounded-pill w-100 py-2 fw-semibold mt-auto shadow">
                   Đặt Lịch Sửa Chữa
                 </Link>
               </div>
@@ -484,7 +484,7 @@ export default function Home() {
                   <li><i className="bi bi-check-circle-fill text-success me-2"></i>Cân chỉnh giảm xóc chống rung lắc</li>
                   <li><i className="bi bi-check-circle-fill text-success me-2"></i>Giảm 10% khi làm combo máy lạnh</li>
                 </ul>
-                <Link href="/repair/3" className="btn btn-outline-primary rounded-pill w-100 py-2 fw-semibold mt-auto">
+                <Link href="/repair/sua-chua-ve-sinh-may-giat" className="btn btn-outline-primary rounded-pill w-100 py-2 fw-semibold mt-auto">
                   Đặt Lịch Ngay
                 </Link>
               </div>

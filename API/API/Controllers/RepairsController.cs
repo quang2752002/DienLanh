@@ -41,13 +41,27 @@ namespace API.Controllers
         /// <summary>
         /// Lấy chi tiết bài viết dịch vụ sửa chữa theo ID
         /// </summary>
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> GetById(int id)
         {
             var repair = await _repairService.GetByIdAsync(id);
             if (repair == null)
             {
                 return NotFound(new { message = $"Không tìm thấy dịch vụ sửa chữa với ID: {id}" });
+            }
+            return Ok(repair);
+        }
+
+        /// <summary>
+        /// Lấy chi tiết bài viết dịch vụ sửa chữa theo Slug
+        /// </summary>
+        [HttpGet("slug/{slug}")]
+        public async Task<IActionResult> GetBySlug(string slug)
+        {
+            var repair = await _repairService.GetBySlugAsync(slug);
+            if (repair == null)
+            {
+                return NotFound(new { message = $"Không tìm thấy dịch vụ sửa chữa với slug: {slug}" });
             }
             return Ok(repair);
         }

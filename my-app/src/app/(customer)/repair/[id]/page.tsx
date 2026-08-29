@@ -27,9 +27,14 @@ export default function RepairDetailPage() {
 
   useEffect(() => {
     if (id) {
-      getRepairById(id as string);
+      getRepairById(id as string).then((repair) => {
+        // Nếu người dùng vào bằng ID dạng số (ví dụ /repair/1) và bài viết có slug, tự động chuyển hướng URL sang slug chuẩn SEO
+        if (repair && repair.slug && !isNaN(Number(id)) && repair.slug !== id) {
+          router.replace(`/repair/${repair.slug}`);
+        }
+      });
     }
-  }, [id, getRepairById]);
+  }, [id, getRepairById, router]);
 
   useEffect(() => {
     if (auth?.user?.fullName && !fullname) {

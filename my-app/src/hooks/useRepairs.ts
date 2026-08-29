@@ -125,17 +125,33 @@ export const useRepairs = () => {
   const [activeRepair, setActiveRepair] = useState<Repair | null>(null);
   const [loadingActiveRepair, setLoadingActiveRepair] = useState(false);
 
-  const getRepairById = useCallback(async (id: string | number) => {
+  const getRepairById = useCallback(async (idOrSlug: string | number) => {
     try {
       setLoadingActiveRepair(true);
-      const res = await repairApi.getById(String(id));
+      const strParam = String(idOrSlug);
+      
+      let res: Repair | null = null;
+      // Nếu là số, gọi getById; nếu là chuỗi chữ (slug), gọi getBySlug
+      if (!isNaN(Number(strParam))) {
+        res = await repairApi.getById(strParam);
+      } else {
+        try {
+          res = await repairApi.getBySlug(strParam);
+        } catch {
+          res = await repairApi.getById(strParam);
+        }
+      }
+
       if (res && res.id) {
         setActiveRepair(res);
         return res;
       }
+
       // Fallback nếu không có kết quả từ API
       const fallback = DEFAULT_MOCK_REPAIRS.find(
-        (r) => String(r.id) === String(id) || String(r.id) === String(id).replace('sd-', '')
+        (r) => String(r.id) === strParam || 
+               r.slug === strParam || 
+               String(r.id) === strParam.replace('sd-', '')
       );
       if (fallback) {
         setActiveRepair(fallback);
@@ -144,9 +160,12 @@ export const useRepairs = () => {
       return null;
     } catch (e) {
       console.error(e);
-      // Fallback sang danh sách có sẵn
+      // Fallback sang danh sách có sẵn theo id hoặc slug
+      const strParam = String(idOrSlug);
       const fallback = DEFAULT_MOCK_REPAIRS.find(
-        (r) => String(r.id) === String(id) || String(r.id) === String(id).replace('sd-', '')
+        (r) => String(r.id) === strParam || 
+               r.slug === strParam || 
+               String(r.id) === strParam.replace('sd-', '')
       ) || DEFAULT_MOCK_REPAIRS[0];
       setActiveRepair(fallback);
       return fallback;

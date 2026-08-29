@@ -26,10 +26,10 @@ const DEFAULT_MENUS: Menu[] = [
     sortOrder: 2, 
     isActive: true,
     children: [
-      { id: 'm-2-1', title: 'Bảo Dưỡng & Vệ Sinh Máy Lạnh', url: '/repair/1', icon: 'bi-snow', sortOrder: 1, isActive: true },
-      { id: 'm-2-2', title: 'Sửa Chữa Tủ Lạnh Inverter', url: '/repair/2', icon: 'bi-patch-check', sortOrder: 2, isActive: true },
-      { id: 'm-2-3', title: 'Sửa Chữa & Vệ Sinh Máy Giặt', url: '/repair/3', icon: 'bi-water', sortOrder: 3, isActive: true },
-      { id: 'm-2-4', title: 'Lắp Đặt & Di Dời Máy Lạnh', url: '/repair/4', icon: 'bi-tools', sortOrder: 4, isActive: true },
+      { id: 'm-2-1', title: 'Bảo Dưỡng & Vệ Sinh Máy Lạnh', url: '/repair/bao-duong-ve-sinh-may-lanh', icon: 'bi-snow', sortOrder: 1, isActive: true },
+      { id: 'm-2-2', title: 'Sửa Chữa Tủ Lạnh Inverter', url: '/repair/sua-chua-tu-lanh-inverter', icon: 'bi-patch-check', sortOrder: 2, isActive: true },
+      { id: 'm-2-3', title: 'Sửa Chữa & Vệ Sinh Máy Giặt', url: '/repair/sua-chua-ve-sinh-may-giat', icon: 'bi-water', sortOrder: 3, isActive: true },
+      { id: 'm-2-4', title: 'Lắp Đặt & Di Dời Máy Lạnh', url: '/repair/lap-dat-di-doi-may-lanh', icon: 'bi-tools', sortOrder: 4, isActive: true },
     ]
   },
   { 
@@ -48,9 +48,9 @@ const DEFAULT_MENUS: Menu[] = [
     sortOrder: 4, 
     isActive: true,
     children: [
-      { id: 'm-3-1', title: '5 Mẹo Dùng Máy Lạnh Tiết Kiệm Điện', url: '/tips', icon: 'bi-lightning-charge', sortOrder: 1, isActive: true },
-      { id: 'm-3-2', title: 'Nhận Biết Máy Lạnh Bị Thiếu Gas', url: '/tips', icon: 'bi-exclamation-diamond', sortOrder: 2, isActive: true },
-      { id: 'm-3-3', title: 'Tự Vệ Sinh Lưới Lọc Tại Nhà', url: '/tips', icon: 'bi-brush', sortOrder: 3, isActive: true },
+      { id: 'm-3-1', title: '5 Mẹo Dùng Máy Lạnh Tiết Kiệm Điện', url: '/tips/5-meo-su-dung-may-lanh-tiet-kiem-dien', icon: 'bi-lightning-charge', sortOrder: 1, isActive: true },
+      { id: 'm-3-2', title: 'Nhận Biết Máy Lạnh Bị Thiếu Gas', url: '/tips/dau-hieu-nhan-biet-may-lanh-bi-thieu-gas', icon: 'bi-exclamation-diamond', sortOrder: 2, isActive: true },
+      { id: 'm-3-3', title: 'Tự Vệ Sinh Lưới Lọc Tại Nhà', url: '/tips/huong-dan-tu-ve-sinh-luoi-loc-may-lanh', icon: 'bi-brush', sortOrder: 3, isActive: true },
       { id: 'm-3-4', title: 'Xem Tất Cả Bài Viết Cẩm Nang', url: '/tips', icon: 'bi-grid', sortOrder: 4, isActive: true },
     ]
   },

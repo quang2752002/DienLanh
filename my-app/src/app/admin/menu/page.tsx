@@ -166,7 +166,7 @@ export default function MenuManagementPage() {
                     type="text"
                     id="url"
                     className={styles.input}
-                    placeholder="VD: /, /repair/1, /#pricing, /tips, /#contact..."
+                    placeholder="VD: /, /repair/bao-duong-ve-sinh-may-lanh, /#pricing, /tips, /#contact..."
                     value={url}
                     onChange={(e) => setUrl(e.target.value)}
                     disabled={isSubmitting}
@@ -179,10 +179,10 @@ export default function MenuManagementPage() {
                       { name: 'Dịch vụ', link: '#services' },
                       { name: 'Bảng giá', link: '/#pricing' },
                       { name: 'Cẩm nang', link: '/tips' },
-                      { name: 'Liên hệ', link: '/#contact' },
-                      { name: 'Sửa Máy Lạnh', link: '/repair/1' },
-                      { name: 'Sửa Tủ Lạnh', link: '/repair/2' },
-                      { name: 'Sửa Máy Giặt', link: '/repair/3' },
+                      { name: 'Vệ sinh máy lạnh', link: '/repair/bao-duong-ve-sinh-may-lanh' },
+                      { name: 'Sửa tủ lạnh', link: '/repair/sua-chua-tu-lanh-inverter' },
+                      { name: 'Sửa máy giặt', link: '/repair/sua-chua-ve-sinh-may-giat' },
+                      { name: 'Liên hệ', link: '/contact' }
                     ].map(p => (
                       <button
                         key={p.name}

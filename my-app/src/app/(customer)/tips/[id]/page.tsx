@@ -2,18 +2,26 @@
 
 import React, { useEffect } from 'react';
 import { useTips } from '@/hooks/useTips';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 export default function TipDetailPage() {
   const { id } = useParams();
   const { getTipById, activeTip, loadingActiveTip } = useTips();
 
+  const router = useRouter();
+
   useEffect(() => {
     if (id) {
-      getTipById(id as string);
+      const strId = String(id);
+      getTipById(strId).then((tip) => {
+        // Tự động chuyển hướng sang slug chuẩn SEO nếu truy cập bằng id cũ (ví dụ /tips/t-1, /tips/1)
+        if (tip && tip.slug && tip.slug !== strId && (strId.startsWith('t-') || !isNaN(Number(strId)))) {
+          router.replace(`/tips/${tip.slug}`);
+        }
+      });
     }
-  }, [id, getTipById]);
+  }, [id, getTipById, router]);
 
   if (loadingActiveTip) {
     return (

@@ -14,6 +14,7 @@ export default function RepairManagementPage() {
   // Form State
   const [editingId, setEditingId] = useState<number | null>(null);
   const [name, setName] = useState('');
+  const [slug, setSlug] = useState('');
   const [description, setDescription] = useState('');
   const [img, setImg] = useState('');
   const [content, setContent] = useState('');
@@ -26,6 +27,7 @@ export default function RepairManagementPage() {
   const resetForm = () => {
     setEditingId(null);
     setName('');
+    setSlug('');
     setDescription('');
     setImg('');
     setContent('');
@@ -37,6 +39,7 @@ export default function RepairManagementPage() {
   const handleEdit = (repair: Repair) => {
     setEditingId(repair.id);
     setName(repair.name || '');
+    setSlug(repair.slug || '');
     setDescription(repair.description || '');
     setImg(repair.img || '');
     setContent(repair.content || '');
@@ -59,6 +62,7 @@ export default function RepairManagementPage() {
 
       const payload = {
         name: name.trim(),
+        slug: slug.trim() || undefined,
         description: description.trim() || undefined,
         img: img.trim() || undefined,
         content: content || undefined,
@@ -115,7 +119,7 @@ export default function RepairManagementPage() {
 
           <form onSubmit={handleSubmit}>
             <div className="row">
-              <div className="col-md-8">
+              <div className="col-md-6">
                 <div className={styles.formGroup}>
                   <label className={styles.label} htmlFor="name">Tên Dịch Vụ Sửa Chữa *</label>
                   <input
@@ -124,7 +128,50 @@ export default function RepairManagementPage() {
                     className={styles.input}
                     placeholder="VD: Sửa Chữa Bo Mạch Máy Lạnh Daikin Inverter..."
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => {
+                      setName(e.target.value);
+                      if (!editingId && !slug) {
+                        // Tự động tạo gợi ý slug
+                        const autoSlug = e.target.value.toLowerCase()
+                          .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+                          .replace(/đ/g, 'd').replace(/Đ/g, 'd')
+                          .replace(/[^a-z0-9\s-]/g, '')
+                          .replace(/\s+/g, '-').trim();
+                        setSlug(autoSlug);
+                      }
+                    }}
+                    disabled={isSubmitting}
+                  />
+                </div>
+              </div>
+
+              <div className="col-md-6">
+                <div className={styles.formGroup}>
+                  <label className={styles.label} htmlFor="slug">Đường Dẫn Thân Thiện SEO (Slug)</label>
+                  <input
+                    type="text"
+                    id="slug"
+                    className={styles.input}
+                    placeholder="VD: sua-chua-bo-mach-may-lanh-daikin"
+                    value={slug}
+                    onChange={(e) => setSlug(e.target.value)}
+                    disabled={isSubmitting}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-md-8">
+                <div className={styles.formGroup}>
+                  <label className={styles.label} htmlFor="img">Đường Dẫn Hình Ảnh Đại Diện (URL)</label>
+                  <input
+                    type="text"
+                    id="img"
+                    className={styles.input}
+                    placeholder="https://images.unsplash.com/... hoặc /images/..."
+                    value={img}
+                    onChange={(e) => setImg(e.target.value)}
                     disabled={isSubmitting}
                   />
                 </div>
@@ -145,23 +192,6 @@ export default function RepairManagementPage() {
                       <option key={c.id} value={c.id}>{c.name}</option>
                     ))}
                   </select>
-                </div>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-12">
-                <div className={styles.formGroup}>
-                  <label className={styles.label} htmlFor="img">Đường Dẫn Hình Ảnh Đại Diện (URL)</label>
-                  <input
-                    type="text"
-                    id="img"
-                    className={styles.input}
-                    placeholder="https://images.unsplash.com/... hoặc /images/..."
-                    value={img}
-                    onChange={(e) => setImg(e.target.value)}
-                    disabled={isSubmitting}
-                  />
                 </div>
               </div>
             </div>

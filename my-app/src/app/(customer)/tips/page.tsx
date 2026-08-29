@@ -8,6 +8,7 @@ const DEFAULT_TIPS = [
   {
     id: 't-1',
     title: '5 Mẹo Sử Dụng Máy Lạnh Tiết Kiệm Điện Đến 30%',
+    slug: '5-meo-su-dung-may-lanh-tiet-kiem-dien',
     shortDescription: 'Chia sẻ các thói quen sử dụng thông minh như điều chỉnh nhiệt độ chuẩn, dùng chế độ Dry/Eco và kết hợp quạt giúp hóa đơn tiền điện nhà bạn giảm đáng kể.',
     imageUrl: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80',
     author: 'Kỹ sư DMS',
@@ -16,6 +17,7 @@ const DEFAULT_TIPS = [
   {
     id: 't-2',
     title: 'Dấu Hiệu Nhận Biết Máy Lạnh Bị Thiếu Gas Cần Nạp Ngay',
+    slug: 'dau-hieu-nhan-biet-may-lanh-bi-thieu-gas',
     shortDescription: 'Khi máy lạnh chạy liên tục nhưng không lạnh sâu, xuất hiện tuyết bám ở van ống nhỏ dàn nóng, đó là lúc bạn cần gọi kỹ thuật nạp gas tránh hỏng block máy.',
     imageUrl: 'https://images.unsplash.com/photo-1581094288338-2314dddb7eed?auto=format&fit=crop&w=600&q=80',
     author: 'Tổ trưởng Kỹ thuật',
@@ -24,6 +26,7 @@ const DEFAULT_TIPS = [
   {
     id: 't-3',
     title: 'Hướng Dẫn Tự Vệ Sinh Lưới Lọc Máy Lạnh Tại Nhà Đơn Giản',
+    slug: 'huong-dan-tu-ve-sinh-luoi-loc-may-lanh',
     shortDescription: 'Chỉ với 10 phút tự tháo và xịt rửa tấm lưới lọc bụi định kỳ 2 tuần một lần, bạn sẽ giúp luồng gió thổi ra luôn sạch khuẩn và bảo vệ sức khỏe cho bé.',
     imageUrl: 'https://images.unsplash.com/photo-1621905252507-b354bc25edac?auto=format&fit=crop&w=600&q=80',
     author: 'Chuyên gia DMS',
@@ -32,6 +35,7 @@ const DEFAULT_TIPS = [
   {
     id: 't-4',
     title: 'Cách Sắp Xếp Tủ Lạnh Khoa Học Giúp Thực Phẩm Luôn Tươi Ngon',
+    slug: 'cach-sap-xep-tu-lanh-khoa-hoc',
     shortDescription: 'Hướng dẫn phân loại thực phẩm chín, sống, rau củ quả ở các ngăn nhiệt độ chuyên dụng để kéo dài thời gian bảo quản và khử mùi hôi tủ lạnh hiệu quả.',
     imageUrl: 'https://images.unsplash.com/photo-1571175482276-5447b516ff9f?auto=format&fit=crop&w=600&q=80',
     author: 'DMS HomeCare',
@@ -112,7 +116,7 @@ export default function TipsPage() {
                         {tip.shortDescription}
                       </p>
 
-                      <Link href={`/tips/${tip.id}`} className="btn btn-outline-primary rounded-pill btn-sm px-4 align-self-start mt-auto">
+                      <Link href={`/tips/${tip.slug || tip.id}`} className="btn btn-outline-primary rounded-pill btn-sm px-4 align-self-start mt-auto">
                         Đọc tiếp <i className="bi bi-chevron-right ms-1"></i>
                       </Link>
                     </div>

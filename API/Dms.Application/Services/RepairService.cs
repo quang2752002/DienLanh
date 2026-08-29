@@ -143,13 +143,55 @@ namespace Dms.Application.Services
             return true;
         }
 
+        /// <summary>
+        /// Lấy chi tiết dịch vụ sửa chữa theo Slug
+        /// </summary>
+        public async Task<RepairDto?> GetBySlugAsync(string slug)
+        {
+            var items = await _unitOfWork.Repairs.FindAsync(r => r.Slug == slug && r.IsDeleted != true);
+            var repair = items.FirstOrDefault();
+            if (repair == null)
+            {
+                return null;
+            }
+
+            return _mapper.Map<RepairDto>(repair);
+        }
+
         #region Helper Methods
         private static string GenerateSlug(string title)
         {
             if (string.IsNullOrWhiteSpace(title)) return string.Empty;
             string str = title.ToLower().Trim();
-            str = System.Text.RegularExpressions.Regex.Replace(str, @"\s+", "-");
-            str = System.Text.RegularExpressions.Regex.Replace(str, @"[^a-z0-9\-_]", "");
+
+            // Chuyển ký tự tiếng Việt có dấu sang không dấu
+            string[] vietnameseSigns = new string[]
+            {
+                "aAeEoOuUiIdDyY",
+                "áàạảãâấầậẩẫăắằặẳẵ",
+                "ÁÀẠẢÃÂẤẦẬẨẪĂẮẰẶẲẴ",
+                "éèẹẻẽêếềệểễ",
+                "ÉÈẸẺẼÊẾỀỆỂỄ",
+                "óòọỏõôốồộổỗơớờợởỡ",
+                "ÓÒỌỎÕÔỐỒỘỔỖƠỚỜỢỞỠ",
+                "úùụủũưứừựửữ",
+                "ÚÙỤỦŨƯỨỪỰỬỮ",
+                "íìịỉĩ",
+                "ÍÌỊỈĨ",
+                "đ",
+                "Đ",
+                "ýỳỵỷỹ",
+                "ÝỲỴỶỸ"
+            };
+
+            for (int i = 1; i < vietnameseSigns.Length; i++)
+            {
+                for (int j = 0; j < vietnameseSigns[i].Length; j++)
+                    str = str.Replace(vietnameseSigns[i][j], vietnameseSigns[0][i - 1]);
+            }
+
+            str = System.Text.RegularExpressions.Regex.Replace(str, @"[^a-z0-9\s-]", "");
+            str = System.Text.RegularExpressions.Regex.Replace(str, @"\s+", "-").Trim('-');
             return str;
         }
         #endregion
