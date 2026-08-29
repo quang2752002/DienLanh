@@ -14,6 +14,8 @@ namespace Dms.Application
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             services.AddScoped<Dms.Application.Interfaces.IRepairService, Dms.Application.Services.RepairService>();
+            services.AddScoped<Dms.Application.Interfaces.IMenuService, Dms.Application.Services.MenuService>();
+            services.AddScoped<Dms.Application.Interfaces.IRepairBookingService, Dms.Application.Services.RepairBookingService>();
             
             return services;
         }

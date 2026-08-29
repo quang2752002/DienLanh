@@ -273,7 +273,7 @@ export default function Home() {
                   </div>
 
                   <div className="card-footer bg-white border-0 p-4 pt-0 d-flex gap-2">
-                    <Link href={`/services/${service.id}`} className="btn btn-outline-primary flex-grow-1 rounded-pill d-flex align-items-center justify-content-center gap-2 small">
+                    <Link href={`/repair/${service.id}`} className="btn btn-outline-primary flex-grow-1 rounded-pill d-flex align-items-center justify-content-center gap-2 small">
                       <i className="bi bi-info-circle-fill"></i>
                       <span>Xem chi tiết</span>
                     </Link>
@@ -288,7 +288,106 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Action Banner CTA */}
+      {/* 4. Bảng Giá Dịch Vụ Niêm Yết Section */}
+      <section className="py-5 bg-white" id="pricing">
+        <div className="container py-lg-4">
+          <div className="row text-center mb-5">
+            <div className="col-lg-8 mx-auto">
+              <span className="text-primary fw-bold text-uppercase tracking-wider small">
+                <i className="bi bi-tags me-1"></i> Bảng giá minh bạch
+              </span>
+              <h2 className="fw-bold mt-2">Bảng Giá Dịch Vụ Sửa Chữa & Bảo Dưỡng</h2>
+              <div className="bg-primary mx-auto my-3" style={{ width: '60px', height: '3px' }}></div>
+              <p className="text-muted">
+                Cam kết báo giá rõ ràng trước khi thi công, miễn phí kiểm tra tận nhà nếu quý khách sử dụng dịch vụ.
+              </p>
+            </div>
+          </div>
+
+          <div className="row g-4 justify-content-center">
+            {/* Gói 1 */}
+            <div className="col-lg-4 col-md-6">
+              <div className="card h-100 border rounded-4 shadow-sm p-4 text-center hover-up transition-all">
+                <div className="text-primary mb-3">
+                  <i className="bi bi-snow fs-1"></i>
+                </div>
+                <h4 className="fw-bold text-dark mb-1">Vệ Sinh Máy Lạnh</h4>
+                <p className="text-muted small">Dành cho hộ gia đình & văn phòng</p>
+                <div className="my-3 py-2 bg-light rounded-3">
+                  <span className="text-muted small">Từ </span>
+                  <span className="fs-3 fw-bold text-primary">150.000đ</span>
+                  <span className="text-muted small"> / máy</span>
+                </div>
+                <ul className="list-unstyled text-start small d-flex flex-column gap-2 my-4 text-secondary">
+                  <li><i className="bi bi-check-circle-fill text-success me-2"></i>Xịt rửa dàn lạnh & dàn nóng bằng máy cao áp</li>
+                  <li><i className="bi bi-check-circle-fill text-success me-2"></i>Thông tắc máng nước, ống thoát thải</li>
+                  <li><i className="bi bi-check-circle-fill text-success me-2"></i>Đo áp suất gas và dòng tải ampe</li>
+                  <li><i className="bi bi-check-circle-fill text-success me-2"></i>Bảo hành chảy nước 30 ngày</li>
+                </ul>
+                <Link href="/repair/1" className="btn btn-outline-primary rounded-pill w-100 py-2 fw-semibold mt-auto">
+                  Đặt Lịch Ngay
+                </Link>
+              </div>
+            </div>
+
+            {/* Gói 2: Phổ biến nhất */}
+            <div className="col-lg-4 col-md-6">
+              <div className="card h-100 border-2 border-primary rounded-4 shadow p-4 text-center position-relative hover-up transition-all bg-primary bg-opacity-10">
+                <div className="position-absolute top-0 start-50 translate-middle">
+                  <span className="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold shadow-sm">
+                    PHỔ BIẾN NHẤT
+                  </span>
+                </div>
+                <div className="text-primary mb-3 mt-2">
+                  <i className="bi bi-shield-fill-check fs-1"></i>
+                </div>
+                <h4 className="fw-bold text-dark mb-1">Sửa Chữa Tủ Lạnh</h4>
+                <p className="text-muted small">Inverter, Side-by-side các hãng</p>
+                <div className="my-3 py-2 bg-white rounded-3 shadow-sm">
+                  <span className="text-muted small">Báo giá từ </span>
+                  <span className="fs-3 fw-bold text-primary">250.000đ</span>
+                </div>
+                <ul className="list-unstyled text-start small d-flex flex-column gap-2 my-4 text-secondary">
+                  <li><i className="bi bi-check-circle-fill text-success me-2"></i>Khắc phục tủ không lạnh, không đông đá</li>
+                  <li><i className="bi bi-check-circle-fill text-success me-2"></i>Xử lý xì gas dàn lạnh, thay cảm biến sensor</li>
+                  <li><i className="bi bi-check-circle-fill text-success me-2"></i>Linh kiện chính hãng 100%</li>
+                  <li><i className="bi bi-check-circle-fill text-success me-2"></i>Bảo hành vàng từ 6 - 12 tháng</li>
+                </ul>
+                <Link href="/repair/2" className="btn btn-primary rounded-pill w-100 py-2 fw-semibold mt-auto shadow">
+                  Đặt Lịch Sửa Chữa
+                </Link>
+              </div>
+            </div>
+
+            {/* Gói 3 */}
+            <div className="col-lg-4 col-md-6">
+              <div className="card h-100 border rounded-4 shadow-sm p-4 text-center hover-up transition-all">
+                <div className="text-primary mb-3">
+                  <i className="bi bi-water fs-1"></i>
+                </div>
+                <h4 className="fw-bold text-dark mb-1">Vệ Sinh Máy Giặt</h4>
+                <p className="text-muted small">Cửa trên & Cửa ngang lồng nghiêng</p>
+                <div className="my-3 py-2 bg-light rounded-3">
+                  <span className="text-muted small">Từ </span>
+                  <span className="fs-3 fw-bold text-primary">250.000đ</span>
+                  <span className="text-muted small"> / máy</span>
+                </div>
+                <ul className="list-unstyled text-start small d-flex flex-column gap-2 my-4 text-secondary">
+                  <li><i className="bi bi-check-circle-fill text-success me-2"></i>Tháo bung lồng giặt tẩy sạch cặn bẩn</li>
+                  <li><i className="bi bi-check-circle-fill text-success me-2"></i>Khử trùng diệt khuẩn lồng giặt inox</li>
+                  <li><i className="bi bi-check-circle-fill text-success me-2"></i>Cân chỉnh giảm xóc chống rung lắc</li>
+                  <li><i className="bi bi-check-circle-fill text-success me-2"></i>Giảm 10% khi làm combo máy lạnh</li>
+                </ul>
+                <Link href="/repair/3" className="btn btn-outline-primary rounded-pill w-100 py-2 fw-semibold mt-auto">
+                  Đặt Lịch Ngay
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Action Banner CTA */}
       <section className="py-5 bg-dark text-white text-center position-relative">
         <div className="container py-3">
           <h2 className="fw-bold mb-3">Hệ thống máy lạnh gặp sự cố?</h2>

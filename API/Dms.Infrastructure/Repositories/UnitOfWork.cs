@@ -11,6 +11,7 @@ namespace Dms.Infrastructure.Repositories
         private IGenericRepository<Menu>? _menus;
         private IGenericRepository<SystemSetting>? _systemSettings;
         private IGenericRepository<Repair>? _repairs;
+        private IGenericRepository<RepairBooking>? _repairBookings;
 
         public UnitOfWork(ApplicationDbContext context)
         {
@@ -28,6 +29,9 @@ namespace Dms.Infrastructure.Repositories
 
         public IGenericRepository<Repair> Repairs => 
             _repairs ??= new GenericRepository<Repair>(_context);
+
+        public IGenericRepository<RepairBooking> RepairBookings => 
+            _repairBookings ??= new GenericRepository<RepairBooking>(_context);
 
         public async Task<int> CompleteAsync()
         {

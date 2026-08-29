@@ -1,0 +1,201 @@
+/* Navbar Responsive & Multi-level Menu Styles */
+
+.navItemDropdown {
+  position: relative;
+}
+
+/* Nav links styling */
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #334155;
+  text-decoration: none;
+  border-radius: 9999px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.navLink:hover {
+  color: #0d6efd;
+  background-color: rgba(13, 110, 253, 0.08);
+}
+
+.navLinkActive {
+  color: #0d6efd !important;
+  font-weight: 600;
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+.dropdownIcon {
+  font-size: 0.75rem;
+  transition: transform 0.25s ease;
+}
+
+.dropdownIconOpen {
+  transform: rotate(180deg);
+}
+
+/* Desktop Dropdown Menu */
+@media (min-width: 992px) {
+  .dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 280px;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    padding: 0.6rem;
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    list-style: none;
+    margin: 0;
+  }
+
+  /* Cầu nối vô hình (Invisible Bridge) ngăn mất hover khi di chuyển chuột từ cha sang menu con */
+  .dropdownMenu::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background: transparent;
+  }
+
+  /* Show on Hover or when Open state is active */
+  .navItemDropdown:hover .dropdownMenu,
+  .dropdownMenu:hover,
+  .dropdownMenuOpen {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .dropdownItem {
+    list-style: none;
+  }
+
+  .dropdownLink {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.65rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #475569;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .dropdownLink:hover {
+    color: #0d6efd;
+    background: #f1f5f9;
+    padding-left: 1.05rem;
+  }
+
+  .dropdownLinkActive {
+    color: #0d6efd;
+    font-weight: 600;
+    background: rgba(13, 110, 253, 0.08);
+  }
+
+  .itemIcon {
+    font-size: 1.1rem;
+    color: #0d6efd;
+    transition: transform 0.2s ease;
+  }
+
+  .dropdownLink:hover .itemIcon {
+    transform: scale(1.15);
+  }
+}
+
+/* Mobile & Tablet Responsive Accordion Submenu */
+@media (max-width: 991.98px) {
+  .navItemDropdown {
+    width: 100%;
+  }
+
+  .navParentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .mobileToggleBtn {
+    border: none;
+    background: transparent;
+    padding: 0.5rem 0.75rem;
+    color: #64748b;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .mobileToggleBtn:hover {
+    background-color: #f1f5f9;
+    color: #0d6efd;
+  }
+
+  .dropdownMenu {
+    list-style: none;
+    padding: 0.25rem 0 0.5rem 1.25rem;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 2px solid #e2e8f0;
+    margin-left: 1.25rem;
+  }
+
+  .dropdownMenuOpen {
+    max-height: 600px;
+    opacity: 1;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .dropdownItem {
+    margin-bottom: 0.2rem;
+  }
+
+  .dropdownLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.88rem;
+    color: #475569;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .dropdownLink:hover,
+  .dropdownLinkActive {
+    color: #0d6efd;
+    background-color: rgba(13, 110, 253, 0.08);
+  }
+
+  .itemIcon {
+    font-size: 0.95rem;
+    color: #0d6efd;
+  }
+}

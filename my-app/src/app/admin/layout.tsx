@@ -15,6 +15,19 @@ export default function AdminLayout({
   const auth = useAuth();
   const router = useRouter();
 
+  React.useEffect(() => {
+    if (!auth.loading) {
+      if (!auth.user || !auth.token) {
+        router.push('/login');
+      } else {
+        const isAdmin = auth.user.roles?.includes('Admin') || (auth.user as any).role === 'Admin';
+        if (!isAdmin) {
+          router.push('/login');
+        }
+      }
+    }
+  }, [auth.user, auth.token, auth.loading, router]);
+
   const isActive = (path: string) => {
     return pathname === path ? 'active' : '';
   };
@@ -25,6 +38,20 @@ export default function AdminLayout({
       router.push('/login');
     }
   };
+
+  if (auth.loading) {
+    return (
+      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f8f9fc' }}>
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Đang tải...</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (!auth.user) {
+    return null;
+  }
 
   return (
     <div id="wrapper" style={{ minHeight: '100vh', display: 'flex' }}>
@@ -64,6 +91,22 @@ export default function AdminLayout({
           <Link href="/admin/category" className="nav-link">
             <i className="bi bi-tags-fill me-2"></i>
             <span>Danh mục Thiết bị</span>
+          </Link>
+        </li>
+
+        {/* Nav Item - Repair (Dịch vụ sửa chữa / Bài viết) */}
+        <li className={`nav-item ${isActive('/admin/repair')}`}>
+          <Link href="/admin/repair" className="nav-link">
+            <i className="bi bi-tools me-2"></i>
+            <span>Dịch vụ Sửa chữa (Bài viết)</span>
+          </Link>
+        </li>
+
+        {/* Nav Item - Repair Bookings (Đăng ký dịch vụ) */}
+        <li className={`nav-item ${isActive('/admin/booking')}`}>
+          <Link href="/admin/booking" className="nav-link">
+            <i className="bi bi-calendar2-check me-2"></i>
+            <span>Lịch Đặt Dịch Vụ</span>
           </Link>
         </li>
 

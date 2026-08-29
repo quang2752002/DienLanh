@@ -48,7 +48,7 @@ namespace Dms.Application.Services
         /// <summary>
         /// Tìm kiếm và đọc dữ liệu có phân trang
         /// </summary>
-        public async Task<PagedResult<RepairDto>> GetPagedAsync(RepairFilterDto filter)
+        public async Task<PagedResult<RepairDto>> GetPagedAsync(RepairDto filter)
         {
             int pageIndex = filter.PageIndex <= 0 ? 1 : filter.PageIndex;
             int pageSize = filter.PageSize <= 0 ? 10 : filter.PageSize;
@@ -80,13 +80,13 @@ namespace Dms.Application.Services
         /// <summary>
         /// Thêm mới dịch vụ sửa chữa
         /// </summary>
-        public async Task<RepairDto> CreateAsync(CreateRepairDto dto)
+        public async Task<RepairDto> CreateAsync(RepairDto dto)
         {
             var repair = _mapper.Map<Repair>(dto);
             
             if (string.IsNullOrWhiteSpace(repair.Slug))
             {
-                repair.Slug = GenerateSlug(dto.Name);
+                repair.Slug = GenerateSlug(dto.Name ?? string.Empty);
             }
 
             repair.Created = DateTime.UtcNow;
@@ -101,7 +101,7 @@ namespace Dms.Application.Services
         /// <summary>
         /// Cập nhật dịch vụ sửa chữa
         /// </summary>
-        public async Task<RepairDto?> UpdateAsync(int id, UpdateRepairDto dto)
+        public async Task<RepairDto?> UpdateAsync(int id, RepairDto dto)
         {
             var repair = await _unitOfWork.Repairs.GetByIdAsync(id);
             if (repair == null || repair.IsDeleted == true)
@@ -113,7 +113,7 @@ namespace Dms.Application.Services
 
             if (string.IsNullOrWhiteSpace(repair.Slug))
             {
-                repair.Slug = GenerateSlug(dto.Name);
+                repair.Slug = GenerateSlug(dto.Name ?? string.Empty);
             }
 
             repair.LastModified = DateTime.UtcNow;

@@ -9,5 +9,8 @@ namespace Dms.Domain.Entities
         public string? Icon { get; set; }
         public int SortOrder { get; set; }
         public bool IsActive { get; set; } = true;
+        public int? ParentId { get; set; }
+        public virtual Menu? Parent { get; set; }
+        public virtual ICollection<Menu> Children { get; set; } = new List<Menu>();
     }
 }

@@ -12,9 +12,13 @@ export default function MenuManagementPage() {
   const [url, setUrl] = useState('');
   const [icon, setIcon] = useState('bi-link');
   const [sortOrder, setSortOrder] = useState<number>(0);
+  const [parentId, setParentId] = useState<string>('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
   const [formSuccess, setFormSuccess] = useState<string | null>(null);
+
+  // Danh sách các menu có thể làm menu Cha (những menu chưa có parentId)
+  const parentMenuOptions = menus.filter(m => !m.parentId);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,6 +42,7 @@ export default function MenuManagementPage() {
         url: url.trim(),
         icon: icon.trim() || undefined,
         sortOrder: Number(sortOrder),
+        parentId: parentId ? Number(parentId) : null,
       });
 
       setFormSuccess('Thêm menu thành công!');
@@ -45,6 +50,7 @@ export default function MenuManagementPage() {
       setUrl('');
       setIcon('bi-link');
       setSortOrder(0);
+      setParentId('');
     } catch (err: any) {
       setFormError(err.message || 'Đã xảy ra lỗi khi thêm menu.');
     } finally {
@@ -52,12 +58,12 @@ export default function MenuManagementPage() {
     }
   };
 
-  const handleDelete = async (id: string) => {
-    if (!window.confirm('Bạn có chắc chắn muốn xóa menu này không?')) {
+  const handleDelete = async (id: string | number) => {
+    if (!window.confirm('Bạn có chắc chắn muốn xóa menu này không? (Các menu con nếu có cũng sẽ bị xóa)')) {
       return;
     }
     try {
-      await removeMenu(id);
+      await removeMenu(String(id));
     } catch (err: any) {
       alert(err.message || 'Lỗi khi xóa menu.');
     }
@@ -95,30 +101,80 @@ export default function MenuManagementPage() {
                 />
               </div>
 
-              <div className={styles.formGroup}>
-                <label className={styles.label} htmlFor="url">Đường Dẫn URL *</label>
-                <input
-                  type="text"
-                  id="url"
-                  className={styles.input}
-                  placeholder="Ví dụ: /, /about, #contact..."
-                  value={url}
-                  onChange={(e) => setUrl(e.target.value)}
-                  disabled={isSubmitting}
-                />
-              </div>
+                <div className={styles.formGroup}>
+                  <label className={styles.label} htmlFor="url">Đường Dẫn URL *</label>
+                  <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                    <input
+                      type="text"
+                      id="url"
+                      className={styles.input}
+                      placeholder="Ví dụ: /, /repair/1, /#pricing, /tips, /#contact"
+                      value={url}
+                      onChange={(e) => setUrl(e.target.value)}
+                      disabled={isSubmitting}
+                      style={{ flex: 1 }}
+                    />
+                  </div>
+                  {/* Preset quick links */}
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem' }}>
+                    <small style={{ color: '#94a3b8', width: '100%', fontSize: '0.75rem' }}>Gợi ý nhanh:</small>
+                    {[
+                      { name: 'Trang chủ', link: '/' },
+                      { name: 'Dịch vụ', link: '#services' },
+                      { name: 'Bảng giá', link: '/#pricing' },
+                      { name: 'Cẩm nang', link: '/tips' },
+                      { name: 'Liên hệ', link: '/#contact' },
+                      { name: 'Sửa Máy Lạnh', link: '/repair/1' },
+                      { name: 'Sửa Tủ Lạnh', link: '/repair/2' },
+                      { name: 'Sửa Máy Giặt', link: '/repair/3' },
+                    ].map(p => (
+                      <button
+                        key={p.name}
+                        type="button"
+                        onClick={() => { setUrl(p.link); if (!title) setTitle(p.name); }}
+                        style={{
+                          background: 'rgba(255,255,255,0.08)',
+                          border: '1px solid rgba(255,255,255,0.15)',
+                          color: '#38bdf8',
+                          fontSize: '0.75rem',
+                          borderRadius: '4px',
+                          padding: '0.15rem 0.45rem',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        {p.name}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.label} htmlFor="icon">Bootstrap Icon Class</label>
+                  <input
+                    type="text"
+                    id="icon"
+                    className={styles.input}
+                    placeholder="Ví dụ: bi-house-door, bi-tools, bi-snow, bi-tags, bi-telephone..."
+                    value={icon}
+                    onChange={(e) => setIcon(e.target.value)}
+                    disabled={isSubmitting}
+                  />
+                </div>
 
               <div className={styles.formGroup}>
-                <label className={styles.label} htmlFor="icon">Bootstrap Icon Class</label>
-                <input
-                  type="text"
-                  id="icon"
+                <label className={styles.label} htmlFor="parentId">Thuộc Menu Cha (Để trống nếu là Menu gốc)</label>
+                <select
+                  id="parentId"
                   className={styles.input}
-                  placeholder="Ví dụ: bi-house, bi-info-circle..."
-                  value={icon}
-                  onChange={(e) => setIcon(e.target.value)}
+                  value={parentId}
+                  onChange={(e) => setParentId(e.target.value)}
                   disabled={isSubmitting}
-                />
+                >
+                  <option value="">-- Là Menu gốc (Cấp 1) --</option>
+                  {parentMenuOptions.map(p => (
+                    <option key={p.id} value={p.id}>{p.title}</option>
+                  ))}
+                </select>
               </div>
 
               <div className={styles.formGroup}>
@@ -200,7 +256,19 @@ export default function MenuManagementPage() {
                         <div className={styles.menuUrl}>{menu.url}</div>
 
                         <div className={styles.menuMeta}>
-                          <span>Thứ tự: {menu.sortOrder}</span>
+                          <div>
+                            {menu.parentId ? (
+                              <span style={{ color: '#38bdf8', fontSize: '0.8rem', display: 'block', marginBottom: '0.25rem' }}>
+                                <i className="bi bi-arrow-return-right me-1"></i>Con của: <strong>{menu.parentTitle || `ID ${menu.parentId}`}</strong>
+                              </span>
+                            ) : (
+                              <span style={{ color: '#a855f7', fontSize: '0.8rem', display: 'block', marginBottom: '0.25rem' }}>
+                                <i className="bi bi-folder-fill me-1"></i>Menu Gốc (Cha)
+                              </span>
+                            )}
+                            <span>Thứ tự: {menu.sortOrder}</span>
+                          </div>
+
                           <button
                             onClick={() => handleDelete(menu.id)}
                             style={{

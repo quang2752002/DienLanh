@@ -10,6 +10,14 @@ namespace Dms.Application.Common
             public const string Delete = "Permissions.Categories.Delete";
         }
 
+        public static class Repairs
+        {
+            public const string View = "Permissions.Repairs.View";
+            public const string Create = "Permissions.Repairs.Create";
+            public const string Edit = "Permissions.Repairs.Edit";
+            public const string Delete = "Permissions.Repairs.Delete";
+        }
+
         public static class Users
         {
             public const string View = "Permissions.Users.View";
@@ -17,6 +25,14 @@ namespace Dms.Application.Common
             public const string Edit = "Permissions.Users.Edit";
             public const string Delete = "Permissions.Users.Delete";
             public const string ManageRoles = "Permissions.Users.ManageRoles";
+        }
+
+        public static class Menus
+        {
+            public const string View = "Permissions.Menus.View";
+            public const string Create = "Permissions.Menus.Create";
+            public const string Edit = "Permissions.Menus.Edit";
+            public const string Delete = "Permissions.Menus.Delete";
         }
 
         public static class SystemSettings

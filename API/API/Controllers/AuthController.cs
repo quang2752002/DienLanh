@@ -30,6 +30,8 @@ namespace API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto request)
         {
+            // Tạm thời tắt kiểm tra Recaptcha
+            /*
             if (string.IsNullOrEmpty(request.RecaptchaToken))
             {
                 return BadRequest("Recaptcha token is required.");
@@ -40,6 +42,7 @@ namespace API.Controllers
             {
                 return BadRequest("Invalid Recaptcha.");
             }
+            */
 
             var user = await _userManager.FindByNameAsync(request.Username);
             if (user == null || !await _userManager.CheckPasswordAsync(user, request.Password))

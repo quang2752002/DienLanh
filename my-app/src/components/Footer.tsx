@@ -6,11 +6,14 @@ import { useMenus } from '@/hooks/useMenus';
 import { useSettings } from '@/hooks/useSettings';
 import { useServiceDevices } from '@/hooks/useServiceDevices';
 
-const DEFAULT_MENUS = [
+import { Menu } from '@/types/menu';
+
+const DEFAULT_MENUS: Menu[] = [
   { id: 'm-1', title: 'Trang chủ', url: '/', icon: 'bi-house-door', sortOrder: 1, isActive: true },
-  { id: 'm-2', title: 'Danh mục thiết bị', url: '/categories', icon: 'bi-tags', sortOrder: 2, isActive: true },
-  { id: 'm-3', title: 'Cẩm nang mẹo vặt', url: '/tips', icon: 'bi-journal-text', sortOrder: 3, isActive: true },
-  { id: 'm-4', title: 'Liên hệ', url: '#contact', icon: 'bi-telephone', sortOrder: 4, isActive: true },
+  { id: 'm-2', title: 'Dịch vụ sửa chữa', url: '/#services', icon: 'bi-tools', sortOrder: 2, isActive: true },
+  { id: 'm-3', title: 'Bảng giá dịch vụ', url: '/#pricing', icon: 'bi-tags', sortOrder: 3, isActive: true },
+  { id: 'm-4', title: 'Cẩm nang & Mẹo vặt', url: '/tips', icon: 'bi-journal-text', sortOrder: 4, isActive: true },
+  { id: 'm-5', title: 'Liên hệ', url: '/#contact', icon: 'bi-telephone', sortOrder: 5, isActive: true },
 ];
 
 const DEFAULT_FOOTER_SERVICES = [
@@ -25,7 +28,8 @@ export default function Footer() {
   const { settings } = useSettings();
   const { serviceDevices } = useServiceDevices();
 
-  const activeMenus = menus.length > 0 ? menus.filter(m => m.isActive) : DEFAULT_MENUS;
+  const activeMenus = (menus.length > 0 ? menus.filter(m => m.isActive) : DEFAULT_MENUS)
+    .filter(m => !m.parentId);
   const displayServices = serviceDevices.length > 0 
     ? serviceDevices.filter(s => s.isActive).slice(0, 4) 
     : DEFAULT_FOOTER_SERVICES;

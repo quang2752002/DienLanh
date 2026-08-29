@@ -16,33 +16,9 @@ namespace Dms.Application.DTOs
         public string? CreatedBy { get; set; }
         public DateTime? LastModified { get; set; }
         public string? LastModifiedBy { get; set; }
-    }
 
-    public class CreateRepairDto
-    {
-        public string Name { get; set; } = string.Empty;
-        public string? Description { get; set; }
-        public string? Img { get; set; }
-        public string? Content { get; set; }
-        public string? Slug { get; set; }
-        public int? CategoryId { get; set; }
-    }
-
-    public class UpdateRepairDto
-    {
-        public int Id { get; set; }
-        public string Name { get; set; } = string.Empty;
-        public string? Description { get; set; }
-        public string? Img { get; set; }
-        public string? Content { get; set; }
-        public string? Slug { get; set; }
-        public int? CategoryId { get; set; }
-    }
-
-    public class RepairFilterDto
-    {
+        // Filter / Search / Pagination
         public string? SearchTerm { get; set; }
-        public int? CategoryId { get; set; }
         public int PageIndex { get; set; } = 1;
         public int PageSize { get; set; } = 10;
     }

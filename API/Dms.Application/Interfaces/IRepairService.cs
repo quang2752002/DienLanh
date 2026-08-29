@@ -9,9 +9,9 @@ namespace Dms.Application.Interfaces
     {
         Task<IEnumerable<RepairDto>> GetAllAsync();
         Task<RepairDto?> GetByIdAsync(int id);
-        Task<PagedResult<RepairDto>> GetPagedAsync(RepairFilterDto filter);
-        Task<RepairDto> CreateAsync(CreateRepairDto dto);
-        Task<RepairDto?> UpdateAsync(int id, UpdateRepairDto dto);
+        Task<PagedResult<RepairDto>> GetPagedAsync(RepairDto filter);
+        Task<RepairDto> CreateAsync(RepairDto dto);
+        Task<RepairDto?> UpdateAsync(int id, RepairDto dto);
         Task<bool> DeleteAsync(int id);
     }
 }

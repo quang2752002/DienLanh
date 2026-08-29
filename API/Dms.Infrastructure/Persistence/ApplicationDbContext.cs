@@ -17,10 +17,31 @@ namespace Dms.Infrastructure.Persistence
         public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
         public DbSet<Menu> Menus => Set<Menu>();
         public DbSet<SystemSetting> SystemSettings => Set<SystemSetting>();
+        public DbSet<Repair> Repairs => Set<Repair>();
+        public DbSet<RepairBooking> RepairBookings => Set<RepairBooking>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<RepairBooking>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.CustomerName).IsRequired().HasMaxLength(150);
+                entity.Property(e => e.PhoneNumber).IsRequired().HasMaxLength(20);
+                entity.Property(e => e.Notes).HasMaxLength(500);
+                entity.Property(e => e.Status).HasMaxLength(50);
+
+                entity.HasOne(e => e.Repair)
+                      .WithMany()
+                      .HasForeignKey(e => e.RepairId)
+                      .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(e => e.User)
+                      .WithMany()
+                      .HasForeignKey(e => e.UserId)
+                      .OnDelete(DeleteBehavior.SetNull);
+            });
 
             modelBuilder.Entity<Category>(entity =>
             {
@@ -45,6 +66,11 @@ namespace Dms.Infrastructure.Persistence
                 entity.Property(e => e.Title).IsRequired().HasMaxLength(150);
                 entity.Property(e => e.Url).IsRequired().HasMaxLength(250);
                 entity.Property(e => e.Icon).HasMaxLength(100);
+
+                entity.HasOne(m => m.Parent)
+                      .WithMany(m => m.Children)
+                      .HasForeignKey(m => m.ParentId)
+                      .OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<SystemSetting>(entity =>
